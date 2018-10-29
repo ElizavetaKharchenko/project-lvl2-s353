@@ -1,6 +1,6 @@
 {
   "name": "gendiff.anka1928",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Compares two configuration files and shows a difference.",
   "main": "index.js",
   "bin": {
@@ -27,8 +27,8 @@
   },
   "homepage": "https://github.com/anka1928/project-lvl2-s353#readme",
   "dependencies": {
-    "lodash": "^4.17.10",
-    "commander": "*"
+    "commander": "^2.19.0",
+    "lodash": "^4.17.10"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

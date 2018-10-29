@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-//import { description } from '../../package.json';
 
 const program = require('commander');
 
