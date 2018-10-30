@@ -28,7 +28,7 @@
   "homepage": "https://github.com/anka1928/project-lvl2-s353#readme",
   "dependencies": {
     "commander": "^2.19.0",
-    "lodash": "^4.17.10"
+    "lodash": "^4.17.11"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
