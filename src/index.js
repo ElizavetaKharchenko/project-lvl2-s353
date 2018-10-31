@@ -7,9 +7,7 @@ const genDiff = (pathToFile1, pathToFile2) => {
   const fileAfter = fs.readFileSync(pathToFile2, 'utf-8');
   const fileToObjBefore = JSON.parse(fileBefore);
   const fileToObjAfter = JSON.parse(fileAfter);
-
   const keys = _.union(Object.keys(fileToObjBefore), Object.keys(fileToObjAfter));
-
   const result = keys.reduce((acc, key) => {
     if (_.has(fileToObjBefore, key) && !_.has(fileToObjAfter, key)) {
       return acc.concat(`- ${key}: ${fileToObjBefore[key]}\n`);
@@ -23,7 +21,8 @@ const genDiff = (pathToFile1, pathToFile2) => {
     return acc.concat(`- ${key}: ${fileToObjBefore[key]}\n+ ${key}: ${fileToObjAfter[key]}\n`);
   }, '');
   const dataToFile = `{\n ${result}}\n`;
-  return fs.writeFileSync(path.join(__dirname, '__fixturesFile__', 'genDiffResult'), dataToFile);
+  return dataToFile;
+  // return fs.writeFileSync(path.join(__dirname, '__fixturesFile__', 'genDiffResult'), dataToFile);
 };
 
 export default genDiff;
