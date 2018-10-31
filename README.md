@@ -18,3 +18,5 @@ npm install -g gendiff.anka1928
 Сравнение плоских json файлов [Asciinema](https://asciinema.org/a/WneQBOtKXkjmlUvvV6K31wRyV)
 
 Сравнение плоских yaml файлов [Asciinema](https://asciinema.org/a/XEwAORjaQvOowpL11fujl2M38)
+
+Сравнение плоских ini файлов [Asciinema](https://asciinema.org/a/vRKQMiPCl7cdxI3T6QrnwRNHC)
