@@ -15,4 +15,6 @@ npm install -g gendiff.anka1928
 ## Пример запуска
 Вывод справки [Asciinema](https://asciinema.org/a/PGqzIFePY6ufdPdmmnarPetKA)
 
-Проверка плоских json файлов [Asciinema](https://asciinema.org/a/WneQBOtKXkjmlUvvV6K31wRyV)
+Сравнение плоских json файлов [Asciinema](https://asciinema.org/a/WneQBOtKXkjmlUvvV6K31wRyV)
+
+Сравнение плоских yaml файлов [Asciinema](https://asciinema.org/a/XEwAORjaQvOowpL11fujl2M38)
