@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import program from 'commander';
-import gengiff from '../';
+import gengiff from '..';
 
 program
   .description('Compares two configuration files and shows a difference')
