@@ -22,3 +22,10 @@ test('flat ini test', () => {
   const expectedFilePath = path.join(__dirname, '__fixtures__', 'diffIni');
   expect(genDiff(before, after)).toBe(fs.readFileSync(expectedFilePath, 'utf-8'));
 });
+
+test('recursive json test', () => {
+  const before = path.join(__dirname, '__fixtures__', 'beforeRecursive.json');
+  const after = path.join(__dirname, '__fixtures__', 'afterRecursive.json');
+  const expectedFilePath = path.join(__dirname, '__fixtures__', 'recursiveResultJson');
+  expect(genDiff(before, after)).toBe(fs.readFileSync(expectedFilePath, 'utf-8'));
+});

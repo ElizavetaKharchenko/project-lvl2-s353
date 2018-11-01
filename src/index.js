@@ -1,7 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import parse from './parser';
-import render from './renderFlat';
+import astBuilder from './astBuilder';
+import render from './render';
 
 const getData = pathToData => fs.readFileSync(pathToData, 'utf-8');
 
@@ -12,7 +13,7 @@ const genDiff = (pathToFile1, pathToFile2) => {
   const extAfter = path.extname(pathToFile2);
   const fileParseBefore = parse(extBefore, fileBefore);
   const fileParseAfter = parse(extAfter, fileAfter);
-  return render(fileParseBefore, fileParseAfter);
+  return render(astBuilder(fileParseBefore, fileParseAfter));
 };
 
 export default genDiff;
