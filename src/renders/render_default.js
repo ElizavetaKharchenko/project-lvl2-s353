@@ -21,15 +21,15 @@ const getString = {
   added: (obj, step) => `${getIndent(step)}+ ${obj.key}: ${stringify(obj.value, step)}`,
   deleted: (obj, step) => `${getIndent(step)}- ${obj.key}: ${stringify(obj.value, step)}`,
   changed: (obj, step) => [
-    `${getIndent(step)}- ${obj.key}: ${stringify(obj.value[0], step)}`,
-    `${getIndent(step)}+ ${obj.key}: ${stringify(obj.value[1], step)}`],
+    `${getIndent(step)}- ${obj.key}: ${stringify(obj.value.before, step)}`,
+    `${getIndent(step)}+ ${obj.key}: ${stringify(obj.value.after, step)}`],
   nested: (obj, step, fn) => `${getIndent(step)}  ${obj.key}: ${fn(obj.children, step + 4)}`,
 };
 
-const render = (ast, step = 2) => {
-  const result = ast.map(node => getString[node.type](node, step, render));
+const defaultRender = (ast, step = 2) => {
+  const result = ast.map(node => getString[node.type](node, step, defaultRender));
   const flattenResult = _.flatten(result).join('\n');
   return `{\n${flattenResult}\n${getIndent(step - 2)}}\n`;
 };
 
-export default render;
+export default defaultRender;
