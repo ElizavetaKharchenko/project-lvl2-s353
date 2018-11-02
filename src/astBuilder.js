@@ -1,4 +1,4 @@
-import _ from 'lodash'; // eslint-disable-line
+import _ from 'lodash';
 
 const propertyActions = [
   {
@@ -28,8 +28,7 @@ const propertyActions = [
     process: (key, data1, data2) => ({
       type: 'changed',
       key,
-      value_before: data1[key],
-      value_after: data2[key],
+      value: [data1[key], data2[key]],
     }),
   },
 ];
