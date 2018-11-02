@@ -43,3 +43,10 @@ test('recursive plain json test', () => {
   const expectedFilePath = path.join(__dirname, '__fixtures__', 'diffPlainRecursive');
   expect(genDiff(before, after, 'plain')).toBe(fs.readFileSync(expectedFilePath, 'utf-8'));
 });
+
+test('recursive test output json', () => {
+  const before = path.join(__dirname, '__fixtures__', 'beforeRecursive.json');
+  const after = path.join(__dirname, '__fixtures__', 'afterRecursive.json');
+  const expectedFilePath = path.join(__dirname, '__fixtures__', 'formatJsonResult');
+  expect(genDiff(before, after, 'json')).toBe(fs.readFileSync(expectedFilePath, 'utf-8'));
+});
