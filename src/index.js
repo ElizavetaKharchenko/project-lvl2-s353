@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import parse from './parser';
 import astBuilder from './astBuilder';
-import render from './renders/render_index';
+import render from './renderers/index';
 
 const getData = pathToData => fs.readFileSync(pathToData, 'utf-8');
 
