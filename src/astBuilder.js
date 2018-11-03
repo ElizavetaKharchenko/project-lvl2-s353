@@ -28,7 +28,8 @@ const propertyActions = [
     process: (key, data1, data2) => ({
       type: 'changed',
       key,
-      value: { before: data1[key], after: data2[key] },
+      valueBefore: data1[key],
+      valueAfter: data2[key],
     }),
   },
 ];

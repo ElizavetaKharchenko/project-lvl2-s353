@@ -21,8 +21,8 @@ const getString = {
   added: (obj, step) => `${getIndent(step)}+ ${obj.key}: ${stringify(obj.value, step)}`,
   deleted: (obj, step) => `${getIndent(step)}- ${obj.key}: ${stringify(obj.value, step)}`,
   changed: (obj, step) => [
-    `${getIndent(step)}- ${obj.key}: ${stringify(obj.value.before, step)}`,
-    `${getIndent(step)}+ ${obj.key}: ${stringify(obj.value.after, step)}`],
+    `${getIndent(step)}- ${obj.key}: ${stringify(obj.valueBefore, step)}`,
+    `${getIndent(step)}+ ${obj.key}: ${stringify(obj.valueAfter, step)}`],
   nested: (obj, step, fn) => `${getIndent(step)}  ${obj.key}: ${fn(obj.children, step + 4)}`,
 };
 

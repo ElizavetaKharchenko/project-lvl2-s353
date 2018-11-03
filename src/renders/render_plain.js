@@ -5,7 +5,7 @@ const isValueComplex = value => (_.isObject(value) ? '[complex value]' : `'${val
 const getString = {
   added: (obj, path) => `Property '${path}' was added with value: ${isValueComplex(obj.value)}`,
   deleted: (obj, path) => `Property '${path}' was removed`,
-  changed: (obj, path) => `Property '${path}' was updated. From ${isValueComplex(obj.value.before)} to ${isValueComplex(obj.value.after)}`,
+  changed: (obj, path) => `Property '${path}' was updated. From ${isValueComplex(obj.valueBefore)} to ${isValueComplex(obj.valueAfter)}`,
   nested: (obj, path, fn) => fn(obj.children, `${path}.`),
 };
 
